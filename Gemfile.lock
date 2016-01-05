@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pr_migrator (0.1.0)
+    pr_migrator (0.2.0)
       octokit (~> 4.2)
       parallel (~> 1.6)
 

@@ -20,10 +20,10 @@ module PrMigrator
     # Start the process of exporting
     # The exported files will be json files
     def start
+      Dir.mkdir(File.join(Dir.getwd, @folder_name_for_exported_files))
       Parallel.map(@pr_numbers, in_processes: 10 ) do |pr_number|
         begin
           response = @client.pull_request(@repo_name, pr_number)
-          Dir.mkdir(File.join(Dir.getwd, @folder_name_for_exported_files))
           File.open("#{@folder_name_for_exported_files}/pr-#{pr_number}.json","w") do |f|
             f.write(JSON.pretty_generate(response.to_attrs))
           end
