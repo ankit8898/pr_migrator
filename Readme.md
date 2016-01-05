@@ -36,3 +36,14 @@ In the above configs
 source_access_token: Is the acccess token of the Github account from where the Export is being made.
 destination_access_token: Is the access token of the other Github Account (May be Enterprise). If it's on github.com use the same as `source_access_token`
 github_enterprise_endpoint: This will be required when Migrating to Github enterprise.
+
+## Exporting PR's 
+
+```ruby
+  PrMigrator::Export.new(repo_name: YOUR_REPO_NAME, pr_numbers: ARRAY_OF_PR_NUMBERS)
+
+# Example
+# PrMigrator::Export.new(repo_name: 'ankit8898/foo', pr_numbers: [1,2,3,4,5,6]) #array of PR's
+# PrMigrator::Export.new(repo_name: 'ankit8898/foo', pr_numbers: (3..4).to_a) # Range of PR
+
+```
