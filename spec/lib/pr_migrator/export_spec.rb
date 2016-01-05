@@ -28,5 +28,7 @@ RSpec.describe PrMigrator::Export do
     expect(subject.folder_name_for_exported_files).to include('export_')
   end
 
+  it { expect(subject.failed_prs).to be_empty }
+  it { expect(subject.exported_prs).to be_empty }
 
 end
