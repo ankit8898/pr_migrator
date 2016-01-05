@@ -6,11 +6,14 @@ Gem::Specification.new do |s|
   s.description = "Migrate Pull requests from one repo to other"
   s.authors     = ["Ankit Gupta"]
   s.email       = 'ankit.gupta8898@gmail.com'
-  s.files       = ["lib/pr_migrator.rb"]
-  s.homepage    =
-    'http://rubygems.org/gems/hola'
+  s.files       = ["lib/pr_migrator.rb",
+                   "lib/pr_migrator/configuration.rb",
+                   "lib/pr_migrator/export.rb"
+                 ]
+  s.homepage    = 'http://rubygems.org/gems/pr_migrator'
   s.license       = 'MIT'
   s.add_runtime_dependency 'octokit' ,'~> 4.2'
+  s.add_runtime_dependency 'parallel' ,'~> 1.6'
   s.add_development_dependency 'rspec', '~> 3.4'
 
 end

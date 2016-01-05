@@ -1,5 +1,9 @@
+require 'octokit'
+require 'json'
+require 'parallel'
+require 'securerandom'
 require 'pr_migrator/configuration'
-
+require 'pr_migrator/export'
 
 module PrMigrator
   class << self
@@ -11,7 +15,6 @@ module PrMigrator
   end
 
   def self.configure
-    puts configuration
     yield(configuration)
   end
 end
