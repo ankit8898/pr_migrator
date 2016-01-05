@@ -28,7 +28,7 @@ module PrMigrator
             f.write(JSON.pretty_generate(response.to_attrs))
           end
           @exported_prs << pr_number
-        rescue Exception => e
+        rescue
           @failed_prs << pr_number
         end
         sleep 2
