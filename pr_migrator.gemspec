@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
                    "lib/pr_migrator/export.rb",
                    "lib/pr_migrator/create.rb"
                  ]
-  s.homepage    = 'http://rubygems.org/gems/pr_migrator'
+  s.homepage    = 'https://github.com/ankit8898/pr_migrator'
   s.license       = 'MIT'
   s.add_runtime_dependency 'octokit' ,'~> 4.2'
   s.add_runtime_dependency 'parallel' ,'~> 1.6'

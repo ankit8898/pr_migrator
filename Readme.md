@@ -59,10 +59,6 @@ The creation module Simulates the creation of PR as you would create manually. B
 
 NOTE: You have to create a Branch in the Repo where the PR's are getting migrated. We will Call this branch as `migrated`
 
-```ruby
-require 'rubygems'
-require 'pr_migrator'
-
 # To Export the PRs
 
 # Configure it
