@@ -40,10 +40,37 @@ github_enterprise_endpoint: This will be required when Migrating to Github enter
 ## Exporting PR's 
 
 ```ruby
-  PrMigrator::Export.new(repo_name: YOUR_REPO_NAME, pr_numbers: ARRAY_OF_PR_NUMBERS)
+export_instance = PrMigrator::Export.new(repo_name: YOUR_REPO_NAME, pr_numbers: ARRAY_OF_PR_NUMBERS)
+create_instance.start # Starts the export 
 
 # Example
 # PrMigrator::Export.new(repo_name: 'ankit8898/foo', pr_numbers: [1,2,3,4,5,6]) #array of PR's
 # PrMigrator::Export.new(repo_name: 'ankit8898/foo', pr_numbers: (3..4).to_a) # Range of PR
+
+```
+
+## Creating PR's 
+
+Creating of PR's is not straight. :)
+
+The creation module Simulates the creation of PR as you would create manual. But Updates the content of the PR with
+the ones from the exports. To get started 
+
+NOTE: You have to create a Branch in the Repo where the PR's are getting migrated. We will Call this branch as `migrated`
+
+```ruby
+require 'rubygems'
+require 'pr_migrator'
+
+# To Export the PRs
+
+# Configure it
+
+# Create an Instance of Create
+
+```ruby
+create_instance = PrMigrator::Create.new(repo_name: 'agupta/rdc-next', exported_pr_dir: 'PATH_TO_FILES/*',migration_branch: 'migrated')
+
+create_instance.start
 
 ```
