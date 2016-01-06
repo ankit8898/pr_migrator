@@ -49,12 +49,13 @@ create_instance.start # Starts the export
 
 ```
 
+After the export is run the files will we present in a `export_xxx` folder.
+
 ## Creating PR's 
 
-Creating of PR's is not straight. :)
+Creating of PR's is not straight. :neutral_face:
 
-The creation module Simulates the creation of PR as you would create manual. But Updates the content of the PR with
-the ones from the exports. To get started 
+The creation module Simulates the creation of PR as you would create manually. But it Updates the content of the PR with the ones from the exports. To get started 
 
 NOTE: You have to create a Branch in the Repo where the PR's are getting migrated. We will Call this branch as `migrated`
 
@@ -69,7 +70,7 @@ require 'pr_migrator'
 # Create an Instance of Create
 
 ```ruby
-create_instance = PrMigrator::Create.new(repo_name: 'agupta/rdc-next', exported_pr_dir: 'PATH_TO_FILES/*',migration_branch: 'migrated')
+create_instance = PrMigrator::Create.new(repo_name: 'agupta/new_foo', exported_pr_dir: 'PATH_TO_FILES/*',migration_branch: 'migrated')
 
 create_instance.start
 
