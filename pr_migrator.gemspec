@@ -8,7 +8,8 @@ Gem::Specification.new do |s|
   s.email       = 'ankit.gupta8898@gmail.com'
   s.files       = ["lib/pr_migrator.rb",
                    "lib/pr_migrator/configuration.rb",
-                   "lib/pr_migrator/export.rb"
+                   "lib/pr_migrator/export.rb",
+                   "lib/pr_migrator/create.rb"
                  ]
   s.homepage    = 'http://rubygems.org/gems/pr_migrator'
   s.license       = 'MIT'

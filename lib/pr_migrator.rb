@@ -4,6 +4,7 @@ require 'parallel'
 require 'securerandom'
 require 'pr_migrator/configuration'
 require 'pr_migrator/export'
+require 'pr_migrator/create'
 
 module PrMigrator
   class << self
