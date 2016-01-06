@@ -59,15 +59,11 @@ The creation module Simulates the creation of PR as you would create manually. B
 
 NOTE: You have to create a Branch in the Repo where the PR's are getting migrated. We will Call this branch as `migrated`
 
-# To Export the PRs
-
-# Configure it
+```ruby
 
 # Create an Instance of Create
-
-```ruby
 create_instance = PrMigrator::Create.new(repo_name: 'agupta/new_foo', exported_pr_dir: 'PATH_TO_FILES/*',migration_branch: 'migrated')
 
-create_instance.start
+create_instance.start # Starts the creation 
 
 ```
